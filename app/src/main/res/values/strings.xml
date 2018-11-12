@@ -30,5 +30,8 @@
     Reduce it to save the planet. By eating a vegetarian meal you are reducing the amount of
     meat bought which will then discourage the production of more meat.</string>
     <string name="challenge_complete_toast">Great Job! %d ecodollars earned</string>
+    <string name="user_name" >user_name</string>
+    <string name="num_carbon_lbs">%d</string>
+    <string name="carbon_lbs">Pounds of Carbon Saved</string>
 
 </resources>

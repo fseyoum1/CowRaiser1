@@ -24,7 +24,7 @@
         <activity android:name=".ShowerChallenge"></activity>
         <activity android:name=".RiceChallenge"></activity>
         <activity android:name=".PublTransportChallenge"></activity>
-
+        <activity android:name=".StatisticsActivity"></activity>
 
     </application>
 

@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), RiceChallenge.class);
                         break;
                     case 5:
-                        intent = new Intent(getApplicationContext(), PublTransportChallenge.class);
+                        intent = new Intent(getApplicationContext(), StatisticsActivity.class);
                         break;
 
                     default:
