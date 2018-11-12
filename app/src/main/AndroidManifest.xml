@@ -18,7 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChallengeActivity"></activity>
+        <activity android:name=".VegetarianChallenge"></activity>
+        <activity android:name=".LightChallenge"></activity>
+        <activity android:name=".AltTransportChallenge"></activity>
+        <activity android:name=".ShowerChallenge"></activity>
+        <activity android:name=".RiceChallenge"></activity>
+        <activity android:name=".PublTransportChallenge"></activity>
+
+
     </application>
 
 </manifest>

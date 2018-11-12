@@ -53,27 +53,12 @@ public class MainActivity extends AppCompatActivity {
         ListView myListView = findViewById(R.id.myListView);
 
         ArrayList<String> arrayList = new ArrayList<String>();
-        arrayList.add("Vegetarian Meal");
-        arrayList.add("Turn Off the Light");
-        arrayList.add("Alternative Transport");
-        arrayList.add("6 Minute Shower");
-        arrayList.add("Do not touch my Rice");
-        arrayList.add("Public Transportation");
-        arrayList.add("Continue.....");
-        arrayList.add("Vegetarian Meal");
-        arrayList.add("Turn Off the Light");
-        arrayList.add("Alternative Transport");
-        arrayList.add("6 Minute Shower");
-        arrayList.add("Do not touch my Rice");
-        arrayList.add("Public Transportation");
-        arrayList.add("Continue.....");
-        arrayList.add("Vegetarian Meal");
-        arrayList.add("Turn Off the Light");
-        arrayList.add("Alternative Transport");
-        arrayList.add("6 Minute Shower");
-        arrayList.add("Do not touch my Rice");
-        arrayList.add("Public Transportation");
-        arrayList.add("Continue.....");
+        arrayList.add(getString(R.string.vegetarian_title));
+        arrayList.add(getString(R.string.light_title));
+        arrayList.add(getString(R.string.altertransport_title));
+        arrayList.add(getString(R.string.shower_title));
+        arrayList.add(getString(R.string.rice_title));
+        arrayList.add(getString(R.string.publtransport_title));
 
 
 
@@ -90,43 +75,28 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = null;
                 switch(position) {
                     case 0:
-                        intent = new Intent(getApplicationContext(), ChallengeActivity.class);
-                        startActivity(intent);
-                        Toast.makeText(getApplicationContext(), "Welcome to the challenge screen.", Toast.LENGTH_LONG).show();
+                        intent = new Intent(getApplicationContext(), VegetarianChallenge.class);
                         break;
                     case 1:
-                        intent = new Intent(getApplicationContext(), ChallengeActivity.class);
-                        startActivity(intent);
-                        Toast.makeText(getApplicationContext(), "Welcome to the challenge screen.", Toast.LENGTH_LONG).show();
+                        intent = new Intent(getApplicationContext(), LightChallenge.class);
                         break;
                     case 2:
-                        intent = new Intent(getApplicationContext(), ChallengeActivity.class);
-                        startActivity(intent);
-                        Toast.makeText(getApplicationContext(), "Welcome to the challenge screen.", Toast.LENGTH_LONG).show();
+                        intent = new Intent(getApplicationContext(), AltTransportChallenge.class);
                         break;
                     case 3:
-                        intent = new Intent(getApplicationContext(), ChallengeActivity.class);
-                        startActivity(intent);
-                        Toast.makeText(getApplicationContext(), "Welcome to the challenge screen.", Toast.LENGTH_LONG).show();
+                        intent = new Intent(getApplicationContext(), ShowerChallenge.class);
                         break;
-
                     case 4:
-                        intent = new Intent(getApplicationContext(), ChallengeActivity.class);
-                        startActivity(intent);
-                        Toast.makeText(getApplicationContext(), "Welcome to the challenge screen.", Toast.LENGTH_LONG).show();
+                        intent = new Intent(getApplicationContext(), RiceChallenge.class);
                         break;
                     case 5:
-                        intent = new Intent(getApplicationContext(), ChallengeActivity.class);
-                        startActivity(intent);
-                        Toast.makeText(getApplicationContext(), "Welcome to the challenge screen.", Toast.LENGTH_LONG).show();
+                        intent = new Intent(getApplicationContext(), PublTransportChallenge.class);
                         break;
-                    case 6:
-                        intent = new Intent(getApplicationContext(), ChallengeActivity.class);
-                        startActivity(intent);
-                        Toast.makeText(getApplicationContext(), "Welcome to the challenge screen.", Toast.LENGTH_LONG).show();
-                        break;
+
                     default:
+                        System.err.println("Broken Activity");
                 }
+                startActivity(intent);
 
 
             }
