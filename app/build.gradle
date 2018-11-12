@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
+    //Google Inc.:Google APIs: 28
     defaultConfig {
         applicationId "io.github.jkim3213.cowraiser"
         minSdkVersion 23

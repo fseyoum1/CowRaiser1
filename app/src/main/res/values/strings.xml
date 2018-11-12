@@ -3,4 +3,35 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="challenge_name">challenge_name</string>
+    <string name="challenge_desc">challenge_desc</string>
+    <string name="log_it">Log It</string>
+    <string name="vegetarian_title">Vegetarian Meal Day</string>
+    <string name="vegetarian_desc">Cow manure is the leading cause of global warming.
+    Reduce it to save the planet. By eating a vegetarian meal you are reducing the amount of
+    meat bought which will then discourage the production of more meat.</string>
+    <string name="light_title">Turn off the lights</string>
+    <string name="light_desc">Cow manure is the leading cause of global warming.
+    Reduce it to save the planet. By eating a vegetarian meal you are reducing the amount of
+    meat bought which will then discourage the production of more meat.</string>
+    <string name="altertransport_title">Alternate Transportation</string>
+    <string name="altertransport_desc">Cow manure is the leading cause of global warming.
+    Reduce it to save the planet. By eating a vegetarian meal you are reducing the amount of
+    meat bought which will then discourage the production of more meat.</string>
+    <string name="shower_title">Shower with Dad</string>
+    <string name="shower_desc">By showering with your dad, you can reduce the amount of water
+    you use and learn to have a good time.</string>
+    <string name="rice_title">Don\'t Touch My Rice</string>
+    <string name="rice_desc">Cow manure is the leading cause of global warming.
+    Reduce it to save the planet. By eating a vegetarian meal you are reducing the amount of
+    meat bought which will then discourage the production of more meat.</string>
+    <string name="publtransport_title">Public Transportation</string>
+    <string name="publtransport_desc">Cow manure is the leading cause of global warming.
+    Reduce it to save the planet. By eating a vegetarian meal you are reducing the amount of
+    meat bought which will then discourage the production of more meat.</string>
+    <string name="challenge_complete_toast">Great Job! %d ecodollars earned</string>
+    <string name="user_name" >user_name</string>
+    <string name="num_carbon_lbs">%d</string>
+    <string name="carbon_lbs">Pounds of Carbon Saved</string>
+
 </resources>
