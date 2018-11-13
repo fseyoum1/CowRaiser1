@@ -4,8 +4,6 @@ import android.os.Bundle;
 
 public class VegetarianChallenge extends ChallengeActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

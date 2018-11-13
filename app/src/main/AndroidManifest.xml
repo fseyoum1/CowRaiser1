@@ -25,6 +25,8 @@
         <activity android:name=".RiceChallenge"></activity>
         <activity android:name=".PublTransportChallenge"></activity>
         <activity android:name=".StatisticsActivity"></activity>
+        <activity android:name=".StoreActivity"></activity>
+
 
     </application>
 

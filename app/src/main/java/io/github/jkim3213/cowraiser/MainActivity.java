@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), ShowerChallenge.class);
                         break;
                     case 4:
-                        intent = new Intent(getApplicationContext(), RiceChallenge.class);
+                        intent = new Intent(getApplicationContext(), StoreActivity.class);
                         break;
                     case 5:
                         intent = new Intent(getApplicationContext(), StatisticsActivity.class);
