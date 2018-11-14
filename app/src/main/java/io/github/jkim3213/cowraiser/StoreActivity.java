@@ -17,6 +17,9 @@ import java.util.Map;
 
 public class StoreActivity extends AppCompatActivity {
 
+    static final String[] itemNamesArr = {"Maple Tree", "Apple Tree", "Pine Tree"};
+    static final int[] itemImagesId = {R.drawable.co2, R.drawable.co2, R.drawable.co2};
+    static final int[] itemCost = {5, 3, 7};
     RecyclerView rv;
     TextView ecodollars;
     @Override
@@ -30,9 +33,7 @@ public class StoreActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         rv.setLayoutManager(linearLayoutManager);
         //get images and names from database...
-        final String[] itemNamesArr = {"Maple Tree", "Apple Tree", "Pine Tree"};
-        final int[] itemImagesId = {R.drawable.co2, R.drawable.co2, R.drawable.co2};
-        final int[] itemCost = {5, 3, 7};
+
 
         List<StoreItem> items = new ArrayList<>();
         for(int i = 0; i < itemImagesId.length; i++) {

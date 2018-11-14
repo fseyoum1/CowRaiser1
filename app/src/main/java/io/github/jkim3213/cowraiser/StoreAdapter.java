@@ -48,7 +48,8 @@ public class StoreAdapter extends RecyclerView.Adapter {
                 if(UserProfile.ecoDollars >= si.cost) {
                     UserProfile.ecoDollars -= si.cost;
                     toastMessage = "Bought " + si.name + " for " + si.cost + " ecodollars.";
-                    //add item to userprofile TODO
+                    //TODO when we have a server, we request BUY
+                    UserProfile.inventory.put(si.name, UserProfile.inventory.get(si.name) + 1);
                     TextView tv = storeLayout.findViewById(R.id.ecoDollars);
                     System.out.println(tv);
                     String updatedEco = context.getString(R.string.num_ecodollars, UserProfile.ecoDollars);

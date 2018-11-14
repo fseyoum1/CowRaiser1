@@ -26,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    //mTextMessage.setText(R.string.title_home);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
                     return true;
                 case R.id.navigation_dashboard:
                     mTextMessage.setText(R.string.title_dashboard);
@@ -51,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         ListView myListView = findViewById(R.id.myListView);
+
+        //Call WEB SERVER for USERProfile and items,,, login....so when they buy they request an increase on the item
+        for(String item : StoreActivity.itemNamesArr) {
+            UserProfile.inventory.put(item, 0);
+        }
+
 
         ArrayList<String> arrayList = new ArrayList<String>();
         arrayList.add(getString(R.string.vegetarian_title));
