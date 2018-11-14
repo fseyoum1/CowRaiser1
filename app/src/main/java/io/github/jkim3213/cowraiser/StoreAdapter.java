@@ -1,6 +1,8 @@
 package io.github.jkim3213.cowraiser;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +11,7 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,12 +19,9 @@ import java.util.List;
 
 public class StoreAdapter extends RecyclerView.Adapter {
 
-    Context context;
     List<StoreItem> storeItemList;
-    //Context context;
 
-    public StoreAdapter(Context context, List<StoreItem> storeItemList) {
-        this.context = context;
+    public StoreAdapter(List<StoreItem> storeItemList) {
         this.storeItemList = storeItemList;
     }
 
@@ -29,7 +29,6 @@ public class StoreAdapter extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.store_item, parent, false);
         RecyclerView.ViewHolder vh = new StoreItemHolder(v); // pass the view to View Holder
-        context = parent.getContext();
         return vh;
     }
 
@@ -43,21 +42,21 @@ public class StoreAdapter extends RecyclerView.Adapter {
         storeItemHolder.buyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //check if i have funds, subtract funds if yes. Do toast on case. update dollars.
+                ConstraintLayout storeLayout = (ConstraintLayout) v.getParent().getParent().getParent().getParent();
                 String toastMessage;
+                Context context = storeLayout.getContext();
                 if(UserProfile.ecoDollars >= si.cost) {
                     UserProfile.ecoDollars -= si.cost;
                     toastMessage = "Bought " + si.name + " for " + si.cost + " ecodollars.";
-                    //add item to userprofile
-                    //update displayed eco
-                    //TODO
-                    //context.findViewById(R.id.ecoDollars).setText(context.getString(R.string.num_ecodollars, UserProfile.ecoDollars));
+                    //add item to userprofile TODO
+                    TextView tv = storeLayout.findViewById(R.id.ecoDollars);
+                    System.out.println(tv);
+                    String updatedEco = context.getString(R.string.num_ecodollars, UserProfile.ecoDollars);
+                    tv.setText(updatedEco);
                 } else {
                     toastMessage = "Not enough ecodollars. Need " + (si.cost - UserProfile.ecoDollars) + " more ecodollars.";
                 }
-                //TODO
-                //Toast.makeText(context.get, toastMessage, Toast.LENGTH_LONG).show();
-
+                Toast.makeText(context, toastMessage, Toast.LENGTH_LONG).show();
             }
         });
 

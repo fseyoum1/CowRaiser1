@@ -39,7 +39,7 @@ public class StoreActivity extends AppCompatActivity {
             items.add(new StoreItem(itemNamesArr[i], itemImagesId[i], itemCost[i]));
         }
 
-        StoreAdapter storeAdapter = new StoreAdapter(this, items);
+        StoreAdapter storeAdapter = new StoreAdapter(items);
         rv.setAdapter(storeAdapter);
 
 
